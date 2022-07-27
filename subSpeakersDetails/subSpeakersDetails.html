@@ -1,0 +1,30 @@
+<template>
+  <lightning-card>
+    <lightning-button
+    name="new-with-defaults"
+    label="New Speaker"
+    variant="brand"
+    class="slds-m-around_medium"
+    onclick={handleNavigateToNewSpeaker}
+></lightning-button>
+          <lightning-record-view-form
+          record-id={recordId}
+          object-api-name={objectApiName}>
+          <div class="slds-grid">
+              <div class="slds-col slds-size_1-of-2">
+                <lightning-avatar size="large"   
+                src="https://www.lightningdesignsystem.com/assets/images/avatar2.jpg" initials="" fallback-icon-name="standard:person_account" 
+                alternative-text="any speaker" class="slds-m-right_small"></lightning-avatar>
+          </div>
+          <div class="slds-col slds-size_1-of-2">
+          <lightning-output-field field-name="Name"></lightning-output-field>
+          <lightning-output-field field-name="Email__c"></lightning-output-field>
+          <lightning-output-field field-name="About_Me__c"></lightning-output-field>
+          
+          </div>
+          </div>
+          </lightning-record-view-form>
+
+        </lightning-card>
+  </template>
+  
